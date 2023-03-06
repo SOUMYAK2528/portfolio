@@ -1,0 +1,52 @@
+</div>
+<div class="socIcon">
+    <div class="button">
+        <div class="icon"><i class="fa-brands fa-github"></i> </div>
+        <span>Github</span>
+    </div>
+    <div class="button">
+        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        <span>Instagram</span>
+    </div>
+    <div class="button">
+        <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+        <span>Linkedin</span>
+    </div>
+    
+</div>
+<script>
+    var input = document.querySelector(".ham");
+    document.getElementById("cross").style.display = 'none';
+    input.addEventListener("click", () => {
+        document.getElementById("togg").classList.toggle("toggle");
+        if (document.getElementById("togg").classList.contains("toggle")) {
+            document.getElementById("cross").style.display = 'none';
+            document.getElementById("hamburger").style.display = 'inline';
+        }
+        else {
+            document.getElementById("cross").style.display = 'inline';
+            document.getElementById("hamburger").style.display = 'none';
+
+        }
+
+    })
+    const button= document.querySelectorAll("a");
+    button.forEach((btn)=>{
+        btn.addEventListener("click",(e)=>{
+            let x= e.clientX-e.target.offsetLeft;
+            let y= e.clientY-e.target.offsetTop;
+            
+            let ripples= document.createElement('span');
+            
+            ripples.style.left= x+'px';
+            ripples.style.top= y+'px';
+            btn.appendChild(ripples);
+            setTimeout(()=>{
+                ripples.remove();
+            },1000)
+        })
+    })
+</script>
+</body>
+
+</html>
