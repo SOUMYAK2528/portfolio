@@ -7,8 +7,16 @@
      padding: 0;
  }
 
+ #load{
+    height: 100vh;
+    width: 100vw;
+    position:absolute;
+    background : #000000 url('https://media0.giphy.com/media/VseXvvxwowwCc/giphy.gif?cid=ecf05e47s5h0pey9gy1jnlr191s07ha18hfv6yuwxo2jcax8&rid=giphy.gif&ct=g') no-repeat center;
+    text-align: center;
+    z-index: 999;
+ }
  .sidebar {
-     background-color: #f9fafc;
+     background-color: #000000;
      width: 200px;
      font-family: 'Fira Sans', sans-serif;
      height: 100vh;
@@ -36,7 +44,7 @@
 
  .sidebar nav ul li a {
      text-decoration: none;
-     color: black;
+     color: white;
  }
 
  .main {
@@ -67,7 +75,7 @@
      height: 400px;
      width: 400px;
      border-radius: 50%;
-     background-color: black;
+     background-color:333333 ;
      overflow: hidden;
  }
 
@@ -124,9 +132,9 @@
      z-index: -1;
  }
 
- .devpic:hover .content img {
+ /* .devpic:hover .content img {
      opacity: 0;
- }
+ } */
 
 
 
@@ -281,6 +289,8 @@
 
  #cross {
      left: 10px;
+     color:#fff;
+     opacity: 0.8;
  }
 
  #hamburger {
@@ -464,6 +474,7 @@
         left:50px;
 
     }
+    
     .devinfo .wrapper .dynamic-txt li{
         font-size: 45px;
     }
