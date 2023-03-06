@@ -49,7 +49,10 @@
 
     const load=document.getElementById("load")
     function myFunction(){
-        load.style.zIndex="-999";
+        setTimeout(()=>{
+            load.style.zIndex="-999";
+
+        },3000)
     }
 </script>
 </body>
